@@ -1,0 +1,9 @@
+// Perspective
+
+@mixin perspective($perspective){
+	-webkit-perspective: $perspective;
+	-moz-perspective: $perspective;
+	-ms-perspective: $perspective;
+	-o-perspective: $perspective;
+	perspective: $perspective;
+}

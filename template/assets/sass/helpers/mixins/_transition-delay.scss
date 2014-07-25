@@ -1,0 +1,9 @@
+// Transition Delay
+
+@mixin transition-delay($var){
+	-webkit-transition-delay: $var;
+	-moz-transition-delay: $var;
+	-o-transition-delay: $var;
+	-ms-transition-delay: $var;
+	transition-delay: $var;
+}

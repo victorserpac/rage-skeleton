@@ -1,0 +1,8 @@
+// Transform Style
+
+@mixin transform-style($args){
+	-webkit-transform-style: $args;
+	-moz-transform-style: $args;
+	-o-transform-style: $args;
+	-ms-transform-style: $args;
+}

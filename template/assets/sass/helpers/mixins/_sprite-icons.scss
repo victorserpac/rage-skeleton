@@ -1,0 +1,7 @@
+// Sprite Icons
+
+@mixin sprite-icons($image){
+	width: icons-sprite-width($image);
+	height: icons-sprite-height($image);
+	@include icons-sprite($image);
+}

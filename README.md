@@ -17,5 +17,9 @@ cd projectname
 chmod +x init.sh
 ./init.sh
 ```
-
+or
+```bash
+alias rageskeleton="bash ~/path/to/script/init.sh"
+rageskeleton
+```
 ======= 

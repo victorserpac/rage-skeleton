@@ -1,0 +1,7 @@
+// Opacity
+
+@mixin opacity( $opacity ){
+	-moz-opacity: $opacity;
+	-khtml-opacity: $opacity;
+	opacity: $opacity;
+}

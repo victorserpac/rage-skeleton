@@ -1,0 +1,7 @@
+// Image background:
+
+@mixin image-background($image){
+	width: image-width($image);
+	height: image-height($image);
+	background: url($image);
+}

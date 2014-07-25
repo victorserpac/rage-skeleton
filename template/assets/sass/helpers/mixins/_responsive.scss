@@ -1,0 +1,17 @@
+// Responsive
+@mixin responsive($screen) {
+	$resp-mobile3: "only screen and (max-width: 959px)";
+	$resp-mobile2: "only screen and (max-width: 767px)";
+	$resp-mobile1: "only screen and (max-width: 456px)";
+
+
+	@if $screen == 'mobile3' {
+		@media #{$resp-mobile2} { @content; }
+	}@else if $screen == 'mobile2' {
+		@media #{$resp-mobile2} { @content; }
+	}@else if $screen == 'mobile1' {
+		@media #{$resp-mobile1}  { @content; }
+	}@else{
+		@media only screen and (max-width: $screen)  { @content; }
+	}
+}
