@@ -66,11 +66,9 @@ cp ./template/index.html ./index.html
 # done
 
 echo "Removing stuff you don't want..."
-# rm -rf .git
-# rm -rf template
-# rm README.md
-# rm README_pt-br.md
-# rm init.sh
-# rm init.bat
+rm -rf .git
+rm -rf template
+rm README.md
+rm init.sh
 
-# echo "Done! ✔"
+echo "Done! ✔"
