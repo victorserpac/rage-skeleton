@@ -19,7 +19,6 @@ chmod u+x init.sh
 ```
 or
 ```bash
-<!-- alias rageskeleton="bash ~/path/to/script/init.sh" -->
 alias rageskeleton="bash ./init.sh"
 rageskeleton
 ```
