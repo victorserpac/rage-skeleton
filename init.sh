@@ -22,6 +22,7 @@ mkdir ./src
 echo "Copying files..."
 cp ./template/assets/js/main.js ./assets/js/main.js
 cp ./template/assets/js/vendors/modernizr-2.6.2.min.js ./assets/js/vendors/modernizr-2.6.2.min.js
+cp ./template/assets/js/vendors/vs-placeholder.js ./assets/js/vendors/vs-placeholder.js
 cp ./template/assets/sass/base/_base.scss ./assets/sass/base/_base.scss
 cp ./template/assets/sass/base/_reset.scss ./assets/sass/base/_reset.scss
 cp ./template/assets/sass/helpers/mixins/_backface-visibility.scss ./assets/sass/helpers/mixins/_backface-visibility.scss
@@ -44,6 +45,7 @@ cp ./template/assets/sass/helpers/mixins/_transition.scss ./assets/sass/helpers/
 cp ./template/assets/sass/helpers/mixins/_user-select.scss ./assets/sass/helpers/mixins/_user-select.scss
 cp ./template/assets/sass/helpers/placeholders/_center-absolute.scss ./assets/sass/helpers/placeholders/_center-absolute.scss
 cp ./template/assets/sass/helpers/placeholders/_clear.scss ./assets/sass/helpers/placeholders/_clear.scss
+cp ./template/assets/sass/helpers/placeholders/_span-helper.scss ./assets/sass/helpers/placeholders/_span-helper.scss
 cp ./template/assets/sass/helpers/_config.scss ./assets/sass/helpers/_config.scss
 cp ./template/assets/sass/helpers/_mixins.scss ./assets/sass/helpers/_mixins.scss
 cp ./template/assets/sass/helpers/_placeholders.scss ./assets/sass/helpers/_placeholders.scss
