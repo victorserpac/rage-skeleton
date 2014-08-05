@@ -1,6 +1,0 @@
-// Icons sprite background
-@mixin icons-bg($icon){
-	height: icons-sprite-height($icon);
-	width: icons-sprite-width($icon);
-	@include icons-sprite($icon);
-}

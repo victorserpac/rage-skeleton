@@ -1,6 +1,0 @@
-// Transform Origin
-
-@mixin transform-origin($args){
-	-webkit-transform-origin: $args;
-	transform-origin: $args;
-}
