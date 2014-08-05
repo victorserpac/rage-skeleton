@@ -1,7 +1,7 @@
 # RAGE-Skeleton
 ---
 
-Boilerplate for new projects based on [Skeleton](https://github.com/vitorbritto/skeleton) from [Vitor Britto](https://github.com/vitorbritto) e architected over the articles:
+Boilerplate for new projects based on [Skeleton](https://github.com/vitorbritto/skeleton) from [Vitor Britto](https://github.com/vitorbritto) and architected over the articles:
 
 * [Architecture for a Sass Project](http://www.sitepoint.com/architecture-sass-project/)
 * [How to structure a Sass project](http://thesassway.com/beginner/how-to-structure-a-sass-project)
