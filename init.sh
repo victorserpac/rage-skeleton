@@ -20,39 +20,48 @@ mkdir ./assets/sass/vendors
 mkdir ./src
 
 echo "Copying files..."
+# Copy files
+# ============================
+
+# JS
 cp ./template/assets/js/main.js ./assets/js/main.js
+
+# JS Vendors
 cp ./template/assets/js/vendors/modernizr-2.6.2.min.js ./assets/js/vendors/modernizr-2.6.2.min.js
 cp ./template/assets/js/vendors/vs-placeholder.js ./assets/js/vendors/vs-placeholder.js
+
+
+# Sass Base
 cp ./template/assets/sass/base/_base.scss ./assets/sass/base/_base.scss
 cp ./template/assets/sass/base/_reset.scss ./assets/sass/base/_reset.scss
-cp ./template/assets/sass/helpers/mixins/_backface-visibility.scss ./assets/sass/helpers/mixins/_backface-visibility.scss
-cp ./template/assets/sass/helpers/mixins/_border-radius.scss ./assets/sass/helpers/mixins/_border-radius.scss
-cp ./template/assets/sass/helpers/mixins/_box-shadow.scss ./assets/sass/helpers/mixins/_box-shadow.scss
-cp ./template/assets/sass/helpers/mixins/_box-sizing.scss ./assets/sass/helpers/mixins/_box-sizing.scss
-cp ./template/assets/sass/helpers/mixins/_calc.scss ./assets/sass/helpers/mixins/_calc.scss
-cp ./template/assets/sass/helpers/mixins/_icons-bg.scss ./assets/sass/helpers/mixins/_icons-bg.scss
+
+# Sass Mixins
 cp ./template/assets/sass/helpers/mixins/_image-background.scss ./assets/sass/helpers/mixins/_image-background.scss
-cp ./template/assets/sass/helpers/mixins/_opacity.scss ./assets/sass/helpers/mixins/_opacity.scss
-cp ./template/assets/sass/helpers/mixins/_perspective.scss ./assets/sass/helpers/mixins/_perspective.scss
+cp ./template/assets/sass/helpers/mixins/_img-responsive.scss ./assets/sass/helpers/mixins/_img-responsive.scss
 cp ./template/assets/sass/helpers/mixins/_responsive.scss ./assets/sass/helpers/mixins/_responsive.scss
-cp ./template/assets/sass/helpers/mixins/_scale.scss ./assets/sass/helpers/mixins/_scale.scss
 cp ./template/assets/sass/helpers/mixins/_sprite-icons.scss ./assets/sass/helpers/mixins/_sprite-icons.scss
-cp ./template/assets/sass/helpers/mixins/_transform-origin.scss ./assets/sass/helpers/mixins/_transform-origin.scss
-cp ./template/assets/sass/helpers/mixins/_transform-style.scss ./assets/sass/helpers/mixins/_transform-style.scss
-cp ./template/assets/sass/helpers/mixins/_transform.scss ./assets/sass/helpers/mixins/_transform.scss
-cp ./template/assets/sass/helpers/mixins/_transition-delay.scss ./assets/sass/helpers/mixins/_transition-delay.scss
-cp ./template/assets/sass/helpers/mixins/_transition.scss ./assets/sass/helpers/mixins/_transition.scss
-cp ./template/assets/sass/helpers/mixins/_user-select.scss ./assets/sass/helpers/mixins/_user-select.scss
+cp ./template/assets/sass/helpers/mixins/_text-emphasis.scss ./assets/sass/helpers/mixins/_text-emphasis.scss
+cp ./template/assets/sass/helpers/mixins/_vendor-prefixes.scss ./assets/sass/helpers/mixins/_vendor-prefixes.scss
+
+# Sass Placeholders
 cp ./template/assets/sass/helpers/placeholders/_center-absolute.scss ./assets/sass/helpers/placeholders/_center-absolute.scss
 cp ./template/assets/sass/helpers/placeholders/_clear.scss ./assets/sass/helpers/placeholders/_clear.scss
 cp ./template/assets/sass/helpers/placeholders/_span-helper.scss ./assets/sass/helpers/placeholders/_span-helper.scss
+
+# Sass Helpers
 cp ./template/assets/sass/helpers/_config.scss ./assets/sass/helpers/_config.scss
 cp ./template/assets/sass/helpers/_mixins.scss ./assets/sass/helpers/_mixins.scss
 cp ./template/assets/sass/helpers/_placeholders.scss ./assets/sass/helpers/_placeholders.scss
+
+# Sass
 cp ./template/assets/sass/README.md ./assets/sass/README.md
 cp ./template/assets/sass/style.scss ./assets/sass/style.scss
+
+# Source
 cp ./template/src/config.rb ./src/config.rb
 cp ./template/src/README.md ./src/README.md
+
+# Root
 cp ./template/.editorconfig ./.editorconfig
 cp ./template/.gitignore ./.gitignore
 cp ./template/index.html ./index.html
