@@ -8,11 +8,11 @@ git init
 
 echo "Initializing the project..."
 sudo npm init
-npm install gulp-jshint --save-dev #Gulp JSHint
-npm install gulp-sass --save-dev #Gulp Sass
-npm install gulp-concat --save-dev #Gulp Concat
-npm install gulp-uglify --save-dev #Gulp Uglify
-npm install gulp-rename --save-dev #Gulp rename
+sudo npm install gulp-jshint --save-dev #Gulp JSHint
+sudo npm install gulp-sass --save-dev #Gulp Sass
+sudo npm install gulp-concat --save-dev #Gulp Concat
+sudo npm install gulp-uglify --save-dev #Gulp Uglify
+sudo npm install gulp-rename --save-dev #Gulp rename
 
 
 # echo "Grunt or Gulp? (Answer with the number)"
