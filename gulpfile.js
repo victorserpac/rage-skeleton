@@ -21,9 +21,9 @@ gulp.task('lint', function() {
 
 // Compile Our Sass
 gulp.task('sass', function() {
-    return gulp.src('assets/scss/*.scss')
+    return gulp.src('scss/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('assets/scss'));
+        .pipe(gulp.dest('css'));
 });
 
 // Concatenate & Minify JS
