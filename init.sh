@@ -5,8 +5,6 @@ rm -rf .git
 rm -rf .gitignore
 cp ./template/.gitignore ./.gitignore
 git init
-git add --all
-git commit -m "Initial commit"
 
 
 # echo "Grunt or Gulp? (Answer with the number)"
@@ -19,9 +17,12 @@ git commit -m "Initial commit"
 # done
 
 echo "Removing stuff you don't want..."
-
 rm -rf template
 rm README.md
 rm init.sh
+
+echo "First commit..."
+git add --all
+git commit -m "Initial commit"
 
 echo "Done! ✔"
