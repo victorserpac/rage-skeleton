@@ -47,6 +47,7 @@ git add --all
 git commit -m "Initial commit"
 
 echo "Running Gulp..."
+cd src
 gulp
 
 echo "Done! ✔"
