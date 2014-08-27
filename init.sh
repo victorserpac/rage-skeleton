@@ -5,6 +5,8 @@ rm -rf .git
 rm -rf .gitignore
 cp ./template/.gitignore ./.gitignore
 git init
+git add --all
+git commit -m "Initial commit"
 
 
 # echo "Grunt or Gulp? (Answer with the number)"
