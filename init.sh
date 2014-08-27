@@ -6,6 +6,7 @@ rm -rf .gitignore
 cp ./template/.gitignore ./.gitignore
 git init
 
+clear
 echo "Initializing the project..."
 sudo npm init
 sudo npm install gulp-jshint --save-dev #Gulp JSHint
@@ -24,10 +25,22 @@ sudo npm install gulp-rename --save-dev #Gulp rename
 #    esac
 # done
 
+clear
 echo "Removing stuff you don't want..."
 rm -rf template
 rm README.md
 rm init.sh
+
+# Remove .gitkeep
+rm ./assets/css/.gitkeep
+rm ./assets/fonts/.gitkeep
+rm ./assets/images/.gitkeep
+rm ./assets/js/components/.gitkeep
+rm ./assets/js/vendors/.gitkeep
+rm ./assets/sass/components/.gitkeep
+rm ./assets/sass/layout/.gitkeep
+rm ./assets/sass/pages/.gitkeep
+rm ./assets/sass/vendors/.gitkeep
 
 echo "First commit..."
 git add --all

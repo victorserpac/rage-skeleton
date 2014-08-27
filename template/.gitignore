@@ -27,4 +27,4 @@ nbproject/*
 
 # Project
 src/.sass-cache/*
-assets/css/*
+node_modules/*
