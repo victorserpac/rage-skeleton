@@ -9,6 +9,9 @@ git init
 clear
 echo "Initializing the project..."
 sudo npm init
+clear
+echo "Initializing dependences..."
+sudo npm install gulp --save-dev #Gulp JSHint
 sudo npm install gulp-jshint --save-dev #Gulp JSHint
 # sudo npm install gulp-sass --save-dev #Gulp Sass
 sudo npm install gulp-concat --save-dev #Gulp Concat
