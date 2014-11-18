@@ -17,9 +17,4 @@ cd projectname
 chmod u+x init.sh
 ./init.sh
 ```
-or
-```bash
-alias rageskeleton="bash ./init.sh"
-rageskeleton
-```
-======= 
+=======
