@@ -7,6 +7,17 @@ Boilerplate for new projects based on [Skeleton](https://github.com/vitorbritto/
 * [How to structure a Sass project](http://thesassway.com/beginner/how-to-structure-a-sass-project)
 * [Sass Style Guide](http://css-tricks.com/sass-style-guide/)
 
+## Dependences:
+* [Git](http://git-scm.com)
+* [Ruby](http://ruby-lang.org)
+* [SASS](http://sass-lang.com)
+	* [sass-globbing](https://github.com/chriseppstein/sass-globbing)
+* [Compass](http://compass-style.org)
+* [node.js](http://nodejs.org)
+* [npm](https://www.npmjs.org)
+* [gulp.js](http://gulpjs.com)
+* [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/related)
+
 ## Getting Started
 
 To start a new project:
