@@ -26,3 +26,6 @@ tmtags
 nbproject/*
 
 # Project
+src/.sass-cache/*
+.sass-cache/*
+node_modules/*

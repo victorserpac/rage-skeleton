@@ -99,3 +99,6 @@ gulp.task('watch', function () {
 
 // Default Task
 gulp.task('default', ['lint', 'compass', 'scripts', 'watch']);
+
+// Init Task
+gulp.task('init', ['compass', 'scripts']);

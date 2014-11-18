@@ -25,7 +25,6 @@ To start a new project:
 ```bash
 git clone git://github.com/victorserpac/rage-skeleton.git projectname
 cd projectname
-chmod u+x init.sh
-./init.sh
+chmod u+x init.sh && ./init.sh
 ```
 =======
