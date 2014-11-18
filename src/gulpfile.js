@@ -1,100 +1,103 @@
-// Include gulp
+/**
+ * Arquivo de configuração do Gulp
+ * =====================================================================
+*/
+
+/** Fazendo require de dependências
+ * ------------------------------------------ */
+/* incluindo o Gulp */
 var gulp = require('gulp');
 
-// Include Our Plugins
-var jshint = require('gulp-jshint'),
-	compass = require('gulp-compass'),
-	concat = require('gulp-concat'),
-	uglify = require('gulp-uglify'),
-	rename = require('gulp-rename');
-
-/** Variables
- * ------------------------------------------ */
-var sass_files = '../assets/sass/*.scss',
-	sass_dir = '../assets/sass',
-	css_dir = '../assets/css',
-	// js_dir = '../assets/js/',
-	js_files = '../assets/js/*.js',
-	js_dest_dir = '../assets/js/dist',
-	js_vendors_files = '../assets/js/vendors/*.js';
-	js_components_files = '../assets/js/components/*.js';
+/* Incluindo Plugins */
+var jshint = require('gulp-jshint');
+var compass = require('gulp-compass');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var rename = require('gulp-rename');
+var livereload = require('gulp-livereload');
+var autoprefixer = require('gulp-autoprefixer');
+var cmq = require('gulp-combine-media-queries');
+var path = require('path');
+var watch = require('gulp-watch');
 
 
 
 /**
- * Tasks
+ * Tasks (Tarefas)
  * =====================================================================
 */
 
-// Lint Task
+/** Lint - Tarefa que usa o JSHint para fazer verificação de qualidade de nosso Javascript
+ * ------------------------------------------ */
 gulp.task('lint', function() {
-    return gulp.src(js_files)
+    return gulp.src( '../assets/js/components/*.js' )
         .pipe(jshint())
-        .pipe(jshint.reporter('default'));
+        .pipe(jshint.reporter( 'default' ));
 });
 
-// Compile Our Sass with Compass
+/** Compass - Tarefa que irá compilar nosso, depois colocar os prefixos
+ * necessários automaticamente e por último unir as media queries em comum
+ * ------------------------------------------ */
 gulp.task('compass', function() {
-	gulp.src(sass_files)
-		.pipe(compass({
-			config_file: './config.rb',
-			css: css_dir,
-			sass: sass_dir,
-		}))
-		.pipe(gulp.dest(css_dir));
+    gulp.src( '../assets/sass/**/*.scss' )
+        .pipe(compass({
+            project: path.join(__dirname, '../assets'),
+            css: 'css',
+            sass: 'sass',
+            image: 'images',
+            font: 'fonts',
+            style: 'expanded',
+            comments: false,
+            require: ['sass-globbing']
+        }))
+        .on('error', function(error) {
+        	console.log(error.toString());
+        })
+        .pipe(autoprefixer( 'last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4' ))
+        .pipe(cmq())
+        .pipe(gulp.dest( '../assets/css' ));
 });
 
 
-// Concatenate & Minify JS
+/** Scripts - Task que irá concatenar e minifcar nosos Javascript
+ * ------------------------------------------ */
+// Vendors
+
 gulp.task('scripts', function() {
-
-    gulp.src(js_files)
-        .pipe(concat('main.concat.js'))
-        .pipe(gulp.dest(js_dest_dir))
-        .pipe(rename('main.concat.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest(js_dest_dir));
-
-	gulp.src(js_vendors_files)
+	gulp.src('../assets/js/vendors/*.js')
         .pipe(concat('vendors.concat.js'))
-        .pipe(gulp.dest(js_dest_dir))
+        .pipe(gulp.dest('../assets/js/'))
         .pipe(rename('vendors.concat.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest(js_dest_dir));
+        .pipe(gulp.dest('../assets/js/'));
 
-	gulp.src(js_components_files)
+    gulp.src('../assets/js/components/*.js')
         .pipe(concat('components.concat.js'))
-        .pipe(gulp.dest(js_dest_dir))
+        .pipe(gulp.dest('../assets/js/'))
         .pipe(rename('components.concat.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest(js_dest_dir));
+        .pipe(gulp.dest('../assets/js/'));
 });
 
-// Watch Files For Changes
-gulp.task('watch', function() {
-    gulp.watch(js_files, ['lint', 'scripts']);
-    gulp.watch(sass_files, ['compass']);
+
+/** Watch - Tasks para monitorar arquivos para modificações
+ * ------------------------------------------ */
+gulp.task('watch', function () {
+    // Criar LiveReload server
+    livereload.listen();
+
+    // Monitorar arquivos .js do diretóio `components`
+    gulp.watch( ['../assets/js/components/*.js'], ['lint']);
+
+    // Monitorar arquivos .js do diretóio `vendors`
+    gulp.watch( ['../assets/js/vendors/*.js', '../assets/js/components/*.js'], ['scripts']);
+
+    // Monitorar arquivos .scss
+    gulp.watch( ['../assets/sass/**/*.scss'], ['compass']);
+
+    // Monitorar arquivos .html e .css, reload quando forem alterados
+    gulp.watch( ['../assets/css/*.css', '../assets/js/*.concat.js', '../*.html'] ).on('change', livereload.changed);
 });
 
 // Default Task
 gulp.task('default', ['lint', 'compass', 'scripts', 'watch']);
-
-
-
-
-
-
-
-
-
-// Compile sass
-// gulp.task('styles', function() {
-//   return gulp.src('src/styles/main.scss')
-//     .pipe(sass({ style: 'expanded' }))
-//     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-//     .pipe(gulp.dest('dist/assets/css'))
-//     .pipe(rename({suffix: '.min'}))
-//     .pipe(minifycss())
-//     .pipe(gulp.dest('dist/assets/css'))
-//     .pipe(notify({ message: 'Styles task complete' }));
-// });
