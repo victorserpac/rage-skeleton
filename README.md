@@ -7,7 +7,7 @@ Boilerplate for new projects based on [Skeleton](https://github.com/vitorbritto/
 * [How to structure a Sass project](http://thesassway.com/beginner/how-to-structure-a-sass-project)
 * [Sass Style Guide](http://css-tricks.com/sass-style-guide/)
 
-## Dependences:
+## Dependencies:
 * [Git](http://git-scm.com)
 * [Ruby](http://ruby-lang.org)
 * [SASS](http://sass-lang.com)
