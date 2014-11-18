@@ -1,14 +1,14 @@
 /**
- * Arquivo de configuração do Gulp
+ * Gulp config file
  * =====================================================================
 */
 
-/** Fazendo require de dependências
+/** Requiring dependeces
  * ------------------------------------------ */
-/* incluindo o Gulp */
+/* Include Gulp */
 var gulp = require('gulp');
 
-/* Incluindo Plugins */
+/* Include Plugins */
 var jshint = require('gulp-jshint');
 var compass = require('gulp-compass');
 var concat = require('gulp-concat');
@@ -23,11 +23,11 @@ var watch = require('gulp-watch');
 
 
 /**
- * Tasks (Tarefas)
+ * Tasks
  * =====================================================================
 */
 
-/** Lint - Tarefa que usa o JSHint para fazer verificação de qualidade de nosso Javascript
+/** Lint - Task that use JSHint to verify the quality of our JS
  * ------------------------------------------ */
 gulp.task('lint', function() {
     return gulp.src( '../assets/js/components/*.js' )
@@ -35,8 +35,8 @@ gulp.task('lint', function() {
         .pipe(jshint.reporter( 'default' ));
 });
 
-/** Compass - Tarefa que irá compilar nosso, depois colocar os prefixos
- * necessários automaticamente e por último unir as media queries em comum
+/** Compass - Task that will compile our .scss, after that, it will complete
+ * the vendor prefixies automatically and last get together the commom media queries
  * ------------------------------------------ */
 gulp.task('compass', function() {
     gulp.src( '../assets/sass/**/*.scss' )
@@ -59,10 +59,8 @@ gulp.task('compass', function() {
 });
 
 
-/** Scripts - Task que irá concatenar e minifcar nosos Javascript
+/** Scripts - Task that concat and minify our JS
  * ------------------------------------------ */
-// Vendors
-
 gulp.task('scripts', function() {
 	gulp.src('../assets/js/vendors/*.js')
         .pipe(concat('vendors.concat.js'))
@@ -80,22 +78,22 @@ gulp.task('scripts', function() {
 });
 
 
-/** Watch - Tasks para monitorar arquivos para modificações
+/** Watch - Task to watch files to modify
  * ------------------------------------------ */
 gulp.task('watch', function () {
-    // Criar LiveReload server
+    // Create LiveReload server
     livereload.listen();
 
-    // Monitorar arquivos .js do diretóio `components`
+    // Watch .js files on `components`
     gulp.watch( ['../assets/js/components/*.js'], ['lint']);
 
-    // Monitorar arquivos .js do diretóio `vendors`
+    // Watch .js files on `components` and `vendors`
     gulp.watch( ['../assets/js/vendors/*.js', '../assets/js/components/*.js'], ['scripts']);
 
-    // Monitorar arquivos .scss
+    // Watch .scss files
     gulp.watch( ['../assets/sass/**/*.scss'], ['compass']);
 
-    // Monitorar arquivos .html e .css, reload quando forem alterados
+    // Watch .html and .css files, reload when modify
     gulp.watch( ['../assets/css/*.css', '../assets/js/*.concat.js', '../*.html'] ).on('change', livereload.changed);
 });
 
