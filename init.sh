@@ -41,12 +41,13 @@ rm ./assets/sass/layout/.gitkeep
 rm ./assets/sass/pages/.gitkeep
 rm ./assets/sass/vendors/.gitkeep
 
-echo "==> First commit..."
-git add --all
-git commit -m "Initial commit"
-
 echo "==> Running Gulp..."
 cd src/
 gulp init
+cd ..
+
+echo "==> First commit..."
+git add --all
+git commit -m "Initial commit"
 
 echo "******************** Tudo pronto! ✔ ********************"
