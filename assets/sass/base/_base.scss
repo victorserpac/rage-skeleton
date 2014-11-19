@@ -2,21 +2,13 @@
  * Base
  * =====================================================================
 */
-body, html{
-	font-size: 13px;
-	color: #000;
-	background: #fff;
-	font-family: 'Helvetica', 'Arial', sans-serif;
+body,
+html{
+
 }
-*{ @include box-sizing(border-box); }
 
-.row{
-	// width: 960px;
-	// margin: 0 auto;
-	// padding: 0 20px;
-
-	/***** Screen Smaller than 960px *****/
-	// @include responsive(mobile3){ width: 768px; }
-	// @include responsive(mobile2){ width: 457px; }
-	// @include responsive(mobile1){ width: 300px; }
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
 }
