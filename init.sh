@@ -34,8 +34,9 @@ rm init.sh
 # Remove .gitkeep
 rm ./assets/css/.gitkeep
 rm ./assets/fonts/.gitkeep
-rm ./assets/images/.gitkeep
+rm ./assets/images/icons/.gitkeep
 rm ./assets/js/components/.gitkeep
+rm ./assets/js/vendors/.gitkeep
 rm ./assets/sass/components/.gitkeep
 rm ./assets/sass/layout/.gitkeep
 rm ./assets/sass/pages/.gitkeep
