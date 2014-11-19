@@ -28,4 +28,4 @@ nbproject/*
 # Project
 src/.sass-cache/*
 .sass-cache/*
-node_modules/*
+src/node_modules/*
