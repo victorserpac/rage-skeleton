@@ -5,6 +5,25 @@
 
 /** 1.0 Base
  * ------------------------------------------ */
-@import "helpers/config";
-@import "base/base";
-@import "base/reset";
+@import "helpers/**/*"; // Importando os Mixins e Placeholders também
+@import "base/*";
+
+
+/** 2.0 - Compontentes
+ * ------------------------------------------ */
+@import "components/*";
+
+
+/** 3.0 - Layout
+ * ------------------------------------------ */
+@import "layout/*";
+
+
+/** 4.0 - Pages
+ * ------------------------------------------ */
+@import "pages/*";
+
+
+/** 5.0 - Vendors
+ * ------------------------------------------ */
+@import "vendors/*";
