@@ -1,4 +1,30 @@
-// Center Abosolute
+/**
+ * Center Abosolute
+ * =====================================================================
+ *		Sabe quando queremos fazer aquela manha rápida de centralizar
+ * bem no meio com o position absolute e a margin auto? Pois é, pra que
+ * fazer isso em cada elemento se podemos usar um placeholder?
+ *
+ * Obs.: Utilizei placeholder ao invéz de mixim pois não preciso informar
+ * nenhum valor por parâmetro
+ *
+ * Ex.:
+ 	#Maios ou menos
+ 		.meu-elemento{
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			position: absolute;
+			margin: auto;
+		}
+		-------------------
+
+	#Beem melhor
+ 		.meu-elemento{
+ 			@extend %center-absolute;
+		}
+*/
 
 %center-absolute{
 	top: 0;

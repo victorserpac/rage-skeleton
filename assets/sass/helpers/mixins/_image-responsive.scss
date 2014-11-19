@@ -1,0 +1,25 @@
+/**
+ * Responsive image
+ * =====================================================================
+ * 		Mantém imagem escalável além da largura do seus pais.
+ *
+ * Ex.:
+ 	#Bom
+ 		.meu-elemento{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+		-------------------
+
+	#Muito bom
+ 		.meu-elemento{
+ 			@include image-responsive();
+		}
+*/
+@mixin image-responsive($display: block) {
+	display: $display;
+	width: 100% \9; // Force o IE10 e antecessores a redimensionar imagens em SVG corretamente
+	max-width: 100%; // Parte 1: Define uma largura máxima relativa ao pai
+	height: auto; // Parte 2: Escala a altura de acordo com a largura, caso contrário a imagem ficará destorcida
+}

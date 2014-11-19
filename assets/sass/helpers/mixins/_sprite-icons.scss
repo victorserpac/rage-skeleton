@@ -1,6 +1,26 @@
-// Sprite Icons
+/**
+ * Sprite icon
+ * =====================================================================
+ * 		Sabe quando você quer fazer aquele icone do facebook, twitter e afins
+ * com sprites, esse mixim é para definir o elemento do exato tamanho do icon.
+ *
+ * Ex.:
+ 	#Ruim
+ 		.meu-elemento{
+			width: 30px;
+			height: 30px;
+			background-image('../images/icons-sprite.png');
+			background-position: -240px -378px;
+		}
+		-------------------
 
-@mixin sprite-icons($image){
+	#Muito bom
+ 		.meu-elemento{
+ 			@include sprite-icon('meu-icone');
+		}
+*/
+
+@mixin sprite-icon($image){
 	width: icons-sprite-width($image);
 	height: icons-sprite-height($image);
 	@include icons-sprite($image);

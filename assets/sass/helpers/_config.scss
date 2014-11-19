@@ -1,26 +1,15 @@
 /**
- * Base Configs
+ * Configurações básicas
  * =====================================================================
 */
 
-/**  Compass Dependencies
+/**  "Chamando" as dependências do Compass
  * ------------------------------------------ */
 @import "compass/css3/images";
 @import "compass/utilities/sprites";
 
 
-/**  Core Utilities
+/**  Configuração de Sprites
  * ------------------------------------------ */
-@import "mixins";
-@import "placeholders";
-
-/**  Sprites
- * ------------------------------------------ */
-// $icons-layout: smart;
+$icons-layout: smart;
 // @import "icons/*.png";
-
-
-/**
- * Variables
- * =====================================================================
-*/

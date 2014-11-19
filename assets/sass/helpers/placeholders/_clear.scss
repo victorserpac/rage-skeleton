@@ -1,6 +1,25 @@
-//  Clear
+/**
+ * Clearfix
+ * =====================================================================
+ * 		Esse é o clearfix, aquele hack para limpar os floats. Agora, é
+ * só extender esse placeholder e a mágica acontecerá
+ *
+ * Ex.:
+ 	#Bom
+ 		.meu-elemento::after{
+			content: '';
+			clear: both;
+			display: block;
+		}
+		-------------------
 
-%clear{
+	#Beem melhor
+ 		.meu-elemento{
+ 			@extend %clearfix;
+		}
+*/
+
+%clearfix{
 	content: '';
 	clear: both;
 	display: block;

@@ -1,7 +1,26 @@
-// Image background:
+/**
+ * Image Background
+ * =====================================================================
+ *		Este mixim é útil para definir um elemento com a largura e altura
+ * de uma imagem e ainda definilá como background-image;
+ *
+ * Ex.:
+ 	#Bom
+ 		.meu-elemento{
+			width: 200px; ==> Largura da imagem
+			height: 100px;
+			background-image: url('../images/minha-imagem.png');
+		}
+		-------------------
+
+	#Melhor
+ 		.meu-elemento{
+ 			@include image-background('../images/minha-imagem.png')
+		}
+*/
 
 @mixin image-background($image){
 	width: image-width($image);
 	height: image-height($image);
-	background: url($image);
+	background-image: url($image);
 }

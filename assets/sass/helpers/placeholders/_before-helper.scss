@@ -1,0 +1,50 @@
+/**
+ * Before Helper
+ * =====================================================================
+ * O que isso faz?
+ *
+ * - Isso é o hack do Before para centralizar verticalmente, usaremos
+ * muito isso, pois nunca antes na história desses hacks, foi tão fácil
+ * centralizar os elementos verticalmente. Lembre de estilizar os outros
+ * elementos com "vertical-align: middle" e "display: inline-block".
+ *
+ * Ex.:
+ 	#Bom
+ 		.meu-elemento{
+ 			
+ 			&::before{
+ 				content: '';
+				display: inline-block;
+			    height: 100%;
+			    vertical-align: middle;
+			    width: 0;
+			}
+
+			.outro-elemento{
+				display: inline-block;
+			    vertical-align: middle;
+			}
+		}
+		-------------------
+
+	#Beem melhor
+ 		.meu-elemento{
+ 			
+ 			&::before{
+ 				@extend %before-helper;
+			}
+
+			.outro-elemento{
+				display: inline-block;
+			    vertical-align: middle;
+			}
+		}
+*/
+
+%before-helper{
+	content: '';
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    vertical-align: middle;
+}
