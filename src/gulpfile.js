@@ -19,6 +19,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var cmq = require('gulp-combine-media-queries');
 var path = require('path');
 var watch = require('gulp-watch');
+var gulpSharp = require('gulp-sharp');
 
 
 
@@ -75,6 +76,82 @@ gulp.task('scripts', function() {
         .pipe(rename('components.concat.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('../assets/js/'));
+});
+
+
+
+/** Images - Task to resize one image in diferents resolutions
+ * ------------------------------------------ */
+gulp.task('images', function(){
+
+	return gulp.src('../assets/images/src/*')
+		.pipe(gulpSharp({
+			resize : [2600],
+			max : true,
+			quality : 100,
+			progressive : true
+		}))
+        .pipe(gulp.dest('../assets/images'))
+
+		/* ==> 1600 */
+		.pipe(gulpSharp({
+			resize : [1600],
+			max : true,
+			quality : 100,
+			progressive : true
+		}))
+		.pipe(rename(function (path) {
+			path.basename += "-1600";
+		}))
+		.pipe(gulp.dest('../assets/images'))
+
+		/* ==> 1200 */
+		.pipe(gulpSharp({
+			resize : [1200],
+			max : true,
+			quality : 100,
+			progressive : true
+		}))
+		.pipe(rename(function (path) {
+			path.basename = path.basename.replace("-1600", "-1200");
+		}))
+		.pipe(gulp.dest('../assets/images'))
+
+		/* ==> 800 */
+		.pipe(gulpSharp({
+			resize : [800],
+			max : true,
+			quality : 100,
+			progressive : true
+		}))
+		.pipe(rename(function (path) {
+			path.basename = path.basename.replace("-1200", "-800");
+		}))
+		.pipe(gulp.dest('../assets/images'))
+
+		/* ==> 400 */
+		.pipe(gulpSharp({
+			resize : [400],
+			max : true,
+			quality : 100,
+			progressive : true
+		}))
+		.pipe(rename(function (path) {
+			path.basename = path.basename.replace("-800", "-400");
+		}))
+		.pipe(gulp.dest('../assets/images'))
+
+		/* ==> 200 */
+		.pipe(gulpSharp({
+			resize : [200],
+			max : true,
+			quality : 100,
+			progressive : true
+		}))
+		.pipe(rename(function (path) {
+			path.basename = path.basename.replace("-400", "-200");
+		}))
+		.pipe(gulp.dest('../assets/images'));
 });
 
 

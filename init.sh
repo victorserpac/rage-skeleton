@@ -23,6 +23,8 @@ sudo npm install gulp-livereload --save-dev #Gulp LiveReload
 sudo npm install gulp-autoprefixer --save-dev #Gulp Auto Prefixer
 sudo npm install gulp-combine-media-queries --save-dev #Gulp Combine Media Queries
 sudo npm install gulp-watch --save-dev #Gulp watch
+sudo npm install gulp-image-resize --save-dev #Gulp Image Resize
+sudo npm install gulp-sharp --save-dev
 cd ../
 
 
