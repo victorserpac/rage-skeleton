@@ -17,6 +17,7 @@ Boilerplate for new projects based on [Skeleton](https://github.com/vitorbritto/
 * [npm](https://www.npmjs.org)
 * [gulp.js](http://gulpjs.com)
 * [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/related)
+* [libvips](https://github.com/jcupitt/libvips)
 
 ## Getting Started
 
