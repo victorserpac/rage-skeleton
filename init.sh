@@ -4,7 +4,6 @@ clear
 echo "============== Initializing project... ================="
 
 #Installing modules
-clear
 echo "==> Installing Gulp and dependencies..."
 cd src/
 sudo npm install
