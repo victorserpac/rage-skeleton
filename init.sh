@@ -1,9 +1,7 @@
 #!/bin/bash
 
 clear
-echo "============== Initializing git... ================="
-rm -rf .git #'Reset' Git
-git init
+echo "============== Initializing project... ================="
 
 #Installing modules
 clear
@@ -36,6 +34,8 @@ gulp init
 cd ..
 
 echo "==> First commit..."
+rm -rf .git #'Reset' Git
+git init
 git add --all
 git commit -m "Initial commit"
 
