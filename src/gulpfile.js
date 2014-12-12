@@ -161,9 +161,6 @@ gulp.task('watch', function () {
     // Create LiveReload server
     livereload.listen();
 
-    // Watch .js files on `components`
-    gulp.watch( ['../assets/js/components/*.js'], ['lint']);
-
     // Watch .js files on `components` and `vendors`
     gulp.watch( ['../assets/js/vendors/*.js', '../assets/js/components/*.js'], ['scripts']);
 
